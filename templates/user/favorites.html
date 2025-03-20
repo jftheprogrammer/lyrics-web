@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0">Favorite Songs</h4>
+            </div>
+            <div class="card-body">
+                {% if songs %}
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    {% for song in songs %}
+                    <div class="col">
+                        <div class="card h-100">
+                            {% if song.artwork_url %}
+                            <img src="{{ song.artwork_url }}" class="card-img-top" alt="{{ song.title }} artwork">
+                            {% else %}
+                            <div class="card-img-top bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 200px;">
+                                <i class="fas fa-music fa-3x"></i>
+                            </div>
+                            {% endif %}
+                            <div class="card-body">
+                                <h5 class="card-title">{{ song.title }}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">{{ song.artist }}</h6>
+                                <p class="card-text">
+                                    {% if song.album %}Album: {{ song.album }}{% endif %}
+                                    {% if song.release_year %}({{ song.release_year }}){% endif %}
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                {% if song.get_streaming_urls() %}
+                                <div class="btn-group w-100">
+                                    {% for platform, url in song.get_streaming_urls().items() %}
+                                    <a href="{{ url }}" class="btn btn-outline-primary" target="_blank">
+                                        <i class="fab fa-{{ platform.lower() }}"></i>
+                                    </a>
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="text-center">
+                    <p class="lead">No favorite songs yet</p>
+                    <a href="{{ url_for('index') }}" class="btn btn-primary">Find Songs</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

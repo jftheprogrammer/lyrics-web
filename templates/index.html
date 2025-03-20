@@ -1,6 +1,18 @@
 {% extends "layout.html" %}
 
 {% block content %}
+{% if not current_user.is_authenticated %}
+<div class="row justify-content-center mb-4">
+    <div class="col-md-8">
+        <div class="alert alert-info">
+            <h4 class="alert-heading">Welcome to Song Recognition!</h4>
+            <p>Please <a href="{{ url_for('auth.login') }}">login</a> or <a href="{{ url_for('auth.register') }}">register</a> to start recognizing songs.</p>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% if current_user.is_authenticated %}
 <div class="row justify-content-center">
     <div class="col-md-8">
         <div class="card mb-4">
@@ -58,4 +70,5 @@
         </div>
     </div>
 </div>
+{% endif %}
 {% endblock %}

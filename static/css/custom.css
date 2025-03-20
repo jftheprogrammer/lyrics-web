@@ -21,13 +21,78 @@
     justify-content: center;
     font-size: 1.5rem;
     margin: 2rem auto;
+    transition: all 0.3s ease;
+}
+
+#record-button:hover {
+    transform: scale(1.05);
+}
+
+#record-button.recording {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
 
 #recording-status {
     color: var(--bs-secondary);
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 1rem;
 }
 
 .spinner-border {
     width: 3rem;
     height: 3rem;
+}
+
+.result-card {
+    transition: transform 0.2s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+}
+
+.album-artwork {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.streaming-links {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.streaming-links a {
+    font-size: 1.5rem;
+    color: var(--bs-secondary);
+    transition: color 0.2s ease;
+}
+
+.streaming-links a:hover {
+    color: var(--bs-primary);
+}
+
+.lyrics-input {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.match-confidence {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--bs-dark);
+    color: var(--bs-light);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
 }

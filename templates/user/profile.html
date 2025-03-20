@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0">Profile</h4>
+            </div>
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Username</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ user.username }}
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ user.email }}
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Member Since</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ user.created_at.strftime('%B %d, %Y') }}
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Last Login</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ user.last_login.strftime('%B %d, %Y %H:%M') if user.last_login else 'Never' }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

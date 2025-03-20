@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0">Search History</h4>
+            </div>
+            <div class="card-body">
+                {% if searches %}
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Type</th>
+                                <th>Query</th>
+                                <th>Result</th>
+                                <th>Confidence</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for search in searches %}
+                            <tr>
+                                <td>{{ search.timestamp.strftime('%Y-%m-%d %H:%M') }}</td>
+                                <td><span class="badge bg-{{ 'primary' if search.search_type == 'lyrics' else 'success' }}">
+                                    {{ search.search_type.title() }}
+                                </span></td>
+                                <td>{{ search.query_text[:50] + '...' if search.query_text|length > 50 else search.query_text }}</td>
+                                <td>
+                                    {% if search.matched_song %}
+                                    {{ search.matched_song.title }} - {{ search.matched_song.artist }}
+                                    {% else %}
+                                    No match
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {% if search.confidence_score %}
+                                    <div class="progress" style="height: 20px;">
+                                        <div class="progress-bar" role="progressbar" 
+                                             style="width: {{ (search.confidence_score * 100)|round }}%"
+                                             aria-valuenow="{{ (search.confidence_score * 100)|round }}" 
+                                             aria-valuemin="0" 
+                                             aria-valuemax="100">
+                                            {{ (search.confidence_score * 100)|round }}%
+                                        </div>
+                                    </div>
+                                    {% else %}
+                                    -
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% else %}
+                <div class="text-center">
+                    <p class="lead">No search history yet</p>
+                    <a href="{{ url_for('index') }}" class="btn btn-primary">Try a Search</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
