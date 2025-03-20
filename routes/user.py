@@ -1,7 +1,6 @@
 from flask import Blueprint, render_template, jsonify, flash, redirect, url_for
 from flask_login import login_required, current_user
-from models import SearchHistory, Favorite, Song
-from database import db
+from storage import load_data
 
 user_bp = Blueprint('user', __name__)
 
@@ -13,17 +12,29 @@ def profile():
 @user_bp.route('/history')
 @login_required
 def history():
-    searches = SearchHistory.query.filter_by(user_id=current_user.id)\
-        .order_by(SearchHistory.timestamp.desc())\
-        .limit(50)\
-        .all()
+    data = load_data()
+    searches = [
+        search for search in data['search_history']
+        if search['user_id'] == current_user.id
+    ]
+    searches.sort(key=lambda x: x['timestamp'], reverse=True)
+    searches = searches[:50]  # Limit to last 50 searches
     return render_template('user/history.html', searches=searches)
 
 @user_bp.route('/favorites')
 @login_required
 def favorites():
-    favorite_songs = Song.query.join(Favorite)\
-        .filter(Favorite.user_id == current_user.id)\
-        .order_by(Favorite.added_at.desc())\
-        .all()
+    data = load_data()
+    favorite_song_ids = [
+        f['song_id'] for f in data['favorites']
+        if f['user_id'] == current_user.id
+    ]
+    favorite_songs = [
+        song for song in data['songs']
+        if song['id'] in favorite_song_ids
+    ]
+    favorite_songs.sort(key=lambda x: next(
+        f['added_at'] for f in data['favorites']
+        if f['user_id'] == current_user.id and f['song_id'] == x['id']
+    ), reverse=True)
     return render_template('user/favorites.html', songs=favorite_songs)

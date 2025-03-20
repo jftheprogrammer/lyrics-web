@@ -51,6 +51,12 @@ class User:
         user = next((u for u in data['users'] if u['username'] == username), None)
         return User(**user) if user else None
 
+    @staticmethod
+    def get_by_email(email):
+        data = load_data()
+        user = next((u for u in data['users'] if u['email'] == email), None)
+        return User(**user) if user else None
+
     def __init__(self, id=None, username=None, email=None, password_hash=None, created_at=None, last_login=None):
         self.id = id
         self.username = username
