@@ -1,6 +1,6 @@
 import os
 import logging
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, url_for
 from audio_processor import process_audio
 from song_matcher import match_lyrics, match_melody
 from error_handlers import register_error_handlers
@@ -12,14 +12,19 @@ logging.basicConfig(
     level=logging.DEBUG,
     format='%(asctime)s [%(levelname)s] %(message)s',
     handlers=[
-        logging.StreamHandler(),
-        logging.FileHandler('app.log')
+        logging.StreamHandler()
     ]
 )
 
 def create_app():
-    app = Flask(__name__)
-    app.secret_key = os.environ.get("SESSION_SECRET")
+    # Create Flask app with absolute path to static folder
+    static_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static')
+    template_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates')
+    app = Flask(__name__, 
+                static_folder=static_folder,
+                template_folder=template_folder)
+
+    app.secret_key = os.environ.get("SESSION_SECRET", "your-secret-key")
 
     # Initialize extensions
     init_middleware(app)
