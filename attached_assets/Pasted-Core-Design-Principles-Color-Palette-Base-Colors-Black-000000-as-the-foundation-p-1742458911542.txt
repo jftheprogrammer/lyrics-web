@@ -1,0 +1,32 @@
+Core Design Principles
+
+    Color Palette:
+        Base Colors: Black (#000000) as the foundation, paired with deep grays (#333333).
+        Accents: Neon or blood red (#FF0000), electric purple (#800080), or toxic green (#00FF00) for pops of rebellion.
+        Subtle Tones: Off-white (#F5F5F5) or faded yellow (#FFFACD) for distressed, vintage vibes.
+        Inspiration: Think faded band posters, scratched vinyl, or dimly lit venues.
+    Typography:
+        Primary Font: Use gritty, stencil-like fonts like “Stencil” or “Punkboy” (free on Dafont). Alternatively, “Courier New” for a typewriter, DIY feel.
+        Secondary Font: Handwritten or scratched styles like “SickCapital Kingston” or “Emo Tears” to mimic journal entries or zine text.
+        Style: ALL CAPS for punk aggression, or lowercase for emo introspection. Mix bold and thin weights for contrast.
+    Textures & Backgrounds:
+        Grunge: Scratched, splattered, or torn paper textures (e.g., free assets from Freepik or Texture Labs).
+        Patterns: Checkerboard (black/white or black/red), plaid, or static noise for a lo-fi punk edge.
+        Background: Dark gradient (black to deep gray) with subtle grain or a collage of punk flyers.
+    Imagery:
+        Icons: Skulls, safety pins, broken hearts, guitars, or cassette tapes—hand-drawn or pixelated for authenticity.
+        Photos: Black-and-white band shots, grainy Polaroids, or moody silhouettes. Add a ripped-edge effect.
+        Animations: Glitch effects, flickering text, or shaky hover states to mimic punk’s raw energy.
+
+Layout Recommendations
+
+    Header:
+        A bold, jagged logo (e.g., your site name in a scratched font) with a neon underline or dripping effect. Add a tagline like “scream it out” in smaller, messy text.
+        Navigation: Horizontal menu with buttons styled like torn stickers or graffiti tags. Hover effects could crack or bleed color.
+    Main Content:
+        Grid: Asymmetrical or overlapping sections—think zine layouts with text boxes askew. Use CSS Grid with uneven columns.
+        Song Database Integration: Display songs in a “setlist” format (e.g., a scratched chalkboard table). Each entry could have a “play” button styled as a cassette or a “lyrics” link with a torn paper popup.
+        User Area: For login/register (if tied to your credentials idea), use a “backstage pass” card design with distressed edges and a barcode.
+    Sidebar/Footer:
+        Sidebar: A vertical “punk manifesto” or playlist widget with a taped-on look.
+        Footer: Black with white scribbles—band names, lyrics, or a “built in the basement” vibe.

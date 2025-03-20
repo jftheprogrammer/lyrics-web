@@ -5,10 +5,7 @@ from audio_processor import process_audio
 from song_matcher import match_lyrics, match_melody
 from error_handlers import register_error_handlers
 from middleware import init_middleware, apply_rate_limits
-from auth import init_auth
-from flask_login import login_required, current_user
 from datetime import datetime
-from routes.user import user_bp
 from storage import load_data, save_data
 
 # Configure logging
@@ -27,18 +24,13 @@ def create_app():
 
     # Initialize extensions
     init_middleware(app)
-    init_auth(app)
     register_error_handlers(app)
-
-    # Register blueprints
-    app.register_blueprint(user_bp, url_prefix='/user')
 
     @app.route('/')
     def index():
         return render_template('index.html')
 
     @app.route('/match_lyrics', methods=['POST'])
-    @login_required
     def lyrics_matching():
         try:
             lyrics = request.form.get('lyrics', '').strip()
@@ -48,30 +40,12 @@ def create_app():
                 return jsonify({'error': 'Lyrics too long. Maximum 1000 characters allowed.'}), 400
 
             matches = match_lyrics(lyrics)
-
-            # Record search history
-            if matches:
-                data = load_data()
-                search = {
-                    'id': len(data['search_history']) + 1,
-                    'user_id': current_user.id,
-                    'song_id': matches[0]['id'] if matches else None,
-                    'search_type': 'lyrics',
-                    'query_text': lyrics,
-                    'confidence_score': matches[0]['confidence'] if matches else 0,
-                    'success': bool(matches),
-                    'timestamp': datetime.utcnow().isoformat()
-                }
-                data['search_history'].append(search)
-                save_data(data)
-
             return jsonify({'matches': matches})
         except Exception as e:
             logging.error(f"Error in lyrics matching: {str(e)}")
             raise
 
     @app.route('/match_melody', methods=['POST'])
-    @login_required
     def melody_matching():
         try:
             if 'audio' not in request.files:
@@ -89,71 +63,10 @@ def create_app():
 
             audio_features = process_audio(audio_file)
             matches = match_melody(audio_features)
-
-            # Record search history
-            if matches:
-                data = load_data()
-                search = {
-                    'id': len(data['search_history']) + 1,
-                    'user_id': current_user.id,
-                    'song_id': matches[0]['id'] if matches else None,
-                    'search_type': 'melody',
-                    'query_text': audio_file.filename,
-                    'confidence_score': matches[0]['confidence'] if matches else 0,
-                    'success': bool(matches),
-                    'timestamp': datetime.utcnow().isoformat()
-                }
-                data['search_history'].append(search)
-                save_data(data)
-
             return jsonify({'matches': matches})
         except Exception as e:
             logging.error(f"Error in melody matching: {str(e)}")
             raise
-
-    @app.route('/favorite/<int:song_id>', methods=['POST'])
-    @login_required
-    def toggle_favorite(song_id):
-        try:
-            data = load_data()
-            existing_favorite = next(
-                (f for f in data['favorites'] 
-                 if f['user_id'] == current_user.id and f['song_id'] == song_id),
-                None
-            )
-
-            if existing_favorite:
-                data['favorites'].remove(existing_favorite)
-                is_favorite = False
-            else:
-                new_favorite = {
-                    'id': len(data['favorites']) + 1,
-                    'user_id': current_user.id,
-                    'song_id': song_id,
-                    'added_at': datetime.utcnow().isoformat()
-                }
-                data['favorites'].append(new_favorite)
-                is_favorite = True
-
-            save_data(data)
-            return jsonify({'success': True, 'is_favorite': is_favorite})
-        except Exception as e:
-            logging.error(f"Error toggling favorite: {str(e)}")
-            return jsonify({'error': 'Failed to update favorite status'}), 500
-
-    @app.route('/favorite/status/<int:song_id>')
-    @login_required
-    def check_favorite_status(song_id):
-        try:
-            data = load_data()
-            is_favorite = any(
-                f['user_id'] == current_user.id and f['song_id'] == song_id
-                for f in data['favorites']
-            )
-            return jsonify({'is_favorite': is_favorite})
-        except Exception as e:
-            logging.error(f"Error checking favorite status: {str(e)}")
-            return jsonify({'error': 'Failed to check favorite status'}), 500
 
     # Apply rate limits after routes are registered
     apply_rate_limits(app)
