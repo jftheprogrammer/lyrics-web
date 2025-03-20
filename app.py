@@ -1,7 +1,6 @@
 import os
 import logging
 from flask import Flask, render_template, request, jsonify
-from database import db
 from audio_processor import process_audio
 from song_matcher import match_lyrics, match_melody
 from error_handlers import register_error_handlers
@@ -10,6 +9,7 @@ from auth import init_auth
 from flask_login import login_required, current_user
 from datetime import datetime
 from routes.user import user_bp
+from storage import load_data, save_data
 
 # Configure logging
 logging.basicConfig(
@@ -25,28 +25,13 @@ def create_app():
     app = Flask(__name__)
     app.secret_key = os.environ.get("SESSION_SECRET")
 
-    # Configure SQLAlchemy
-    app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL", "sqlite:///songs.db")
-    app.config["SQLALCHEMY_ENGINE_OPTIONS"] = {
-        "pool_recycle": 300,
-        "pool_pre_ping": True,
-    }
-
-    # Configure upload limits
-    app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file size
-
     # Initialize extensions
-    db.init_app(app)
     init_middleware(app)
     init_auth(app)
     register_error_handlers(app)
 
     # Register blueprints
     app.register_blueprint(user_bp, url_prefix='/user')
-
-    with app.app_context():
-        import models
-        db.create_all()
 
     @app.route('/')
     def index():
@@ -66,16 +51,19 @@ def create_app():
 
             # Record search history
             if matches:
-                search = models.SearchHistory(
-                    user_id=current_user.id,
-                    song_id=matches[0]['id'] if matches else None,
-                    search_type='lyrics',
-                    query_text=lyrics,
-                    confidence_score=matches[0]['confidence'] if matches else 0,
-                    success=bool(matches)
-                )
-                db.session.add(search)
-                db.session.commit()
+                data = load_data()
+                search = {
+                    'id': len(data['search_history']) + 1,
+                    'user_id': current_user.id,
+                    'song_id': matches[0]['id'] if matches else None,
+                    'search_type': 'lyrics',
+                    'query_text': lyrics,
+                    'confidence_score': matches[0]['confidence'] if matches else 0,
+                    'success': bool(matches),
+                    'timestamp': datetime.utcnow().isoformat()
+                }
+                data['search_history'].append(search)
+                save_data(data)
 
             return jsonify({'matches': matches})
         except Exception as e:
@@ -104,16 +92,19 @@ def create_app():
 
             # Record search history
             if matches:
-                search = models.SearchHistory(
-                    user_id=current_user.id,
-                    song_id=matches[0]['id'] if matches else None,
-                    search_type='melody',
-                    query_text=audio_file.filename,
-                    confidence_score=matches[0]['confidence'] if matches else 0,
-                    success=bool(matches)
-                )
-                db.session.add(search)
-                db.session.commit()
+                data = load_data()
+                search = {
+                    'id': len(data['search_history']) + 1,
+                    'user_id': current_user.id,
+                    'song_id': matches[0]['id'] if matches else None,
+                    'search_type': 'melody',
+                    'query_text': audio_file.filename,
+                    'confidence_score': matches[0]['confidence'] if matches else 0,
+                    'success': bool(matches),
+                    'timestamp': datetime.utcnow().isoformat()
+                }
+                data['search_history'].append(search)
+                save_data(data)
 
             return jsonify({'matches': matches})
         except Exception as e:
@@ -124,23 +115,29 @@ def create_app():
     @login_required
     def toggle_favorite(song_id):
         try:
-            existing_favorite = models.Favorite.query.filter_by(
-                user_id=current_user.id,
-                song_id=song_id
-            ).first()
+            data = load_data()
+            existing_favorite = next(
+                (f for f in data['favorites'] 
+                 if f['user_id'] == current_user.id and f['song_id'] == song_id),
+                None
+            )
 
             if existing_favorite:
-                db.session.delete(existing_favorite)
+                data['favorites'].remove(existing_favorite)
                 is_favorite = False
             else:
-                new_favorite = models.Favorite(user_id=current_user.id, song_id=song_id)
-                db.session.add(new_favorite)
+                new_favorite = {
+                    'id': len(data['favorites']) + 1,
+                    'user_id': current_user.id,
+                    'song_id': song_id,
+                    'added_at': datetime.utcnow().isoformat()
+                }
+                data['favorites'].append(new_favorite)
                 is_favorite = True
 
-            db.session.commit()
+            save_data(data)
             return jsonify({'success': True, 'is_favorite': is_favorite})
         except Exception as e:
-            db.session.rollback()
             logging.error(f"Error toggling favorite: {str(e)}")
             return jsonify({'error': 'Failed to update favorite status'}), 500
 
@@ -148,10 +145,11 @@ def create_app():
     @login_required
     def check_favorite_status(song_id):
         try:
-            is_favorite = models.Favorite.query.filter_by(
-                user_id=current_user.id,
-                song_id=song_id
-            ).first() is not None
+            data = load_data()
+            is_favorite = any(
+                f['user_id'] == current_user.id and f['song_id'] == song_id
+                for f in data['favorites']
+            )
             return jsonify({'is_favorite': is_favorite})
         except Exception as e:
             logging.error(f"Error checking favorite status: {str(e)}")

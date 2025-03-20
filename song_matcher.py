@@ -1,7 +1,7 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
-from models import Song
+from storage import load_data
 import logging
 
 def match_lyrics(query_lyrics):
@@ -9,13 +9,14 @@ def match_lyrics(query_lyrics):
     Match lyrics using TF-IDF and cosine similarity
     """
     try:
-        songs = Song.query.all()
+        data = load_data()
+        songs = data['songs']
         if not songs:
             return []
 
         # Create TF-IDF vectors
         vectorizer = TfidfVectorizer()
-        lyrics_list = [song.lyrics for song in songs if song.lyrics]
+        lyrics_list = [song['lyrics'] for song in songs if song.get('lyrics')]
         if not lyrics_list:
             return []
 
@@ -30,8 +31,13 @@ def match_lyrics(query_lyrics):
         for idx, similarity in enumerate(similarities):
             if similarity > 0.1:  # Minimum similarity threshold
                 matches.append({
-                    'title': songs[idx].title,
-                    'artist': songs[idx].artist,
+                    'id': songs[idx]['id'],
+                    'title': songs[idx]['title'],
+                    'artist': songs[idx]['artist'],
+                    'album': songs[idx].get('album'),
+                    'release_year': songs[idx].get('release_year'),
+                    'artwork_url': songs[idx].get('artwork_url'),
+                    'streaming_urls': songs[idx].get('streaming_urls', {}),
                     'confidence': float(similarity)
                 })
 
@@ -45,7 +51,8 @@ def match_melody(query_features):
     Match melody using feature similarity
     """
     try:
-        songs = Song.query.all()
+        data = load_data()
+        songs = data['songs']
         if not songs:
             return []
 
@@ -53,15 +60,20 @@ def match_melody(query_features):
         query_features = np.array(query_features)
 
         for song in songs:
-            if song.melody_features:
-                song_features = np.array(eval(song.melody_features))
+            if song.get('melody_features'):
+                song_features = np.array(eval(song['melody_features']))
                 # Dynamic Time Warping could be used here for better matching
                 similarity = 1 / (1 + np.mean(np.abs(query_features - song_features)))
 
                 if similarity > 0.6:  # Minimum similarity threshold
                     matches.append({
-                        'title': song.title,
-                        'artist': song.artist,
+                        'id': song['id'],
+                        'title': song['title'],
+                        'artist': song['artist'],
+                        'album': song.get('album'),
+                        'release_year': song.get('release_year'),
+                        'artwork_url': song.get('artwork_url'),
+                        'streaming_urls': song.get('streaming_urls', {}),
                         'confidence': float(similarity)
                     })
 
