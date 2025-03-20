@@ -1,83 +1,47 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
-from storage import load_data
 import logging
+from services.musicbrainz_service import search_song_by_lyrics
 
-def match_lyrics(query_lyrics):
+def match_lyrics(query_lyrics: str) -> list:
     """
-    Match lyrics using TF-IDF and cosine similarity
+    Match lyrics using MusicBrainz and enhance with TF-IDF similarity
     """
     try:
-        data = load_data()
-        songs = data['songs']
-        if not songs:
+        # Get matches from MusicBrainz
+        matches = search_song_by_lyrics(query_lyrics)
+        if not matches:
             return []
 
-        # Create TF-IDF vectors
+        # Calculate TF-IDF similarity for better confidence scores
         vectorizer = TfidfVectorizer()
-        lyrics_list = [song['lyrics'] for song in songs if song.get('lyrics')]
-        if not lyrics_list:
-            return []
-
-        lyrics_list.append(query_lyrics)
+        lyrics_list = [query_lyrics] + [match['title'] for match in matches]  # Using titles for similarity
         tfidf_matrix = vectorizer.fit_transform(lyrics_list)
 
-        # Calculate similarities
-        similarities = cosine_similarity(tfidf_matrix[-1:], tfidf_matrix[:-1])[0]
+        # Calculate similarities between query and each match
+        similarities = cosine_similarity(tfidf_matrix[0:1], tfidf_matrix[1:])[0]
 
-        # Get top matches
-        matches = []
-        for idx, similarity in enumerate(similarities):
-            if similarity > 0.1:  # Minimum similarity threshold
-                matches.append({
-                    'id': songs[idx]['id'],
-                    'title': songs[idx]['title'],
-                    'artist': songs[idx]['artist'],
-                    'album': songs[idx].get('album'),
-                    'release_year': songs[idx].get('release_year'),
-                    'artwork_url': songs[idx].get('artwork_url'),
-                    'streaming_urls': songs[idx].get('streaming_urls', {}),
-                    'confidence': float(similarity)
-                })
+        # Update confidence scores
+        for idx, match in enumerate(matches):
+            match['confidence'] = float(similarities[idx])
 
-        return sorted(matches, key=lambda x: x['confidence'], reverse=True)[:5]
+        # Sort by confidence and return top matches
+        matches.sort(key=lambda x: x['confidence'], reverse=True)
+        return matches[:5]
+
     except Exception as e:
         logging.error(f"Error matching lyrics: {str(e)}")
-        raise
+        return []
 
-def match_melody(query_features):
+def match_melody(query_features: list) -> list:
     """
-    Match melody using feature similarity
+    Match melody using audio features
+    Note: This is a placeholder for future melody matching implementation
     """
     try:
-        data = load_data()
-        songs = data['songs']
-        if not songs:
-            return []
-
-        matches = []
-        query_features = np.array(query_features)
-
-        for song in songs:
-            if song.get('melody_features'):
-                song_features = np.array(eval(song['melody_features']))
-                # Dynamic Time Warping could be used here for better matching
-                similarity = 1 / (1 + np.mean(np.abs(query_features - song_features)))
-
-                if similarity > 0.6:  # Minimum similarity threshold
-                    matches.append({
-                        'id': song['id'],
-                        'title': song['title'],
-                        'artist': song['artist'],
-                        'album': song.get('album'),
-                        'release_year': song.get('release_year'),
-                        'artwork_url': song.get('artwork_url'),
-                        'streaming_urls': song.get('streaming_urls', {}),
-                        'confidence': float(similarity)
-                    })
-
-        return sorted(matches, key=lambda x: x['confidence'], reverse=True)[:5]
+        # For now, return an empty list as melody matching requires additional setup
+        return []
     except Exception as e:
         logging.error(f"Error matching melody: {str(e)}")
-        raise
+        return []

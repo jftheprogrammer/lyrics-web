@@ -6,7 +6,6 @@ from song_matcher import match_lyrics, match_melody
 from error_handlers import register_error_handlers
 from middleware import init_middleware, apply_rate_limits
 from datetime import datetime
-from storage import load_data, save_data
 
 # Configure logging
 logging.basicConfig(
@@ -44,26 +43,12 @@ def create_app():
                 logging.warning("Lyrics too long")
                 return jsonify({'error': 'Lyrics too long. Maximum 1000 characters allowed.'}), 400
 
-            # For testing purposes, return a mock response
-            matches = [{
-                'id': 1,
-                'title': 'Test Song',
-                'artist': 'Test Artist',
-                'album': 'Test Album',
-                'release_year': 2024,
-                'artwork_url': None,
-                'streaming_urls': {
-                    'spotify': 'https://open.spotify.com',
-                    'youtube': 'https://youtube.com'
-                },
-                'confidence': 0.85
-            }]
-
-            logging.info(f"Returning matches: {matches}")
+            matches = match_lyrics(lyrics)
+            logging.info(f"Found {len(matches)} matches")
             return jsonify({'matches': matches})
         except Exception as e:
             logging.error(f"Error in lyrics matching: {str(e)}")
-            raise
+            return jsonify({'error': 'An error occurred while processing your request'}), 500
 
     @app.route('/match_melody', methods=['POST'])
     def melody_matching():
@@ -86,7 +71,7 @@ def create_app():
             return jsonify({'matches': matches})
         except Exception as e:
             logging.error(f"Error in melody matching: {str(e)}")
-            raise
+            return jsonify({'error': 'An error occurred while processing your request'}), 500
 
     # Apply rate limits after routes are registered
     apply_rate_limits(app)
