@@ -1,0 +1,315 @@
+2025-03-20 08:11:18,595 [INFO] Request started: GET /
+2025-03-20 08:11:18,610 [INFO] Request completed in 0.01s: GET / - 200
+2025-03-20 08:11:18,622 [INFO] Request started: GET /static/css/custom.css
+2025-03-20 08:11:18,627 [INFO] Request completed in 0.00s: GET /static/css/custom.css - 200
+2025-03-20 08:11:18,689 [INFO] Request started: GET /static/js/audio_recorder.js
+2025-03-20 08:11:18,690 [INFO] Request completed in 0.00s: GET /static/js/audio_recorder.js - 200
+2025-03-20 08:11:18,738 [INFO] Request started: GET /static/js/main.js
+2025-03-20 08:11:18,739 [INFO] Request completed in 0.00s: GET /static/js/main.js - 200
+2025-03-20 08:11:19,783 [INFO] Request started: GET /
+2025-03-20 08:11:19,783 [INFO] Request completed in 0.00s: GET / - 200
+2025-03-20 08:11:20,186 [INFO] Request started: GET /static/css/custom.css
+2025-03-20 08:11:20,186 [INFO] Request completed in 0.00s: GET /static/css/custom.css - 200
+2025-03-20 08:11:21,065 [INFO] Request started: GET /static/js/main.js
+2025-03-20 08:11:21,066 [INFO] Request completed in 0.00s: GET /static/js/main.js - 200
+2025-03-20 08:11:21,089 [INFO] Request started: GET /static/js/audio_recorder.js
+2025-03-20 08:11:21,090 [INFO] Request completed in 0.00s: GET /static/js/audio_recorder.js - 304
+2025-03-20 08:13:02,870 [INFO] Request started: GET /register
+2025-03-20 08:13:02,881 [INFO] Request completed in 0.01s: GET /register - 200
+2025-03-20 08:13:03,325 [INFO] Request started: GET /static/css/custom.css
+2025-03-20 08:13:03,326 [INFO] Request completed in 0.00s: GET /static/css/custom.css - 304
+2025-03-20 08:13:03,340 [INFO] Request started: GET /static/js/main.js
+2025-03-20 08:13:03,341 [INFO] Request completed in 0.00s: GET /static/js/main.js - 304
+2025-03-20 08:13:03,405 [INFO] Request started: GET /static/js/audio_recorder.js
+2025-03-20 08:13:03,406 [INFO] Request completed in 0.00s: GET /static/js/audio_recorder.js - 304
+2025-03-20 08:13:08,796 [INFO] Request started: GET /login
+2025-03-20 08:13:08,859 [INFO] Request completed in 0.06s: GET /login - 200
+2025-03-20 08:13:09,216 [INFO] Request started: GET /static/css/custom.css
+2025-03-20 08:13:09,225 [INFO] Request completed in 0.01s: GET /static/css/custom.css - 304
+2025-03-20 08:13:09,263 [INFO] Request started: GET /static/js/audio_recorder.js
+2025-03-20 08:13:09,267 [INFO] Request completed in 0.00s: GET /static/js/audio_recorder.js - 304
+2025-03-20 08:13:09,269 [INFO] Request started: GET /static/js/main.js
+2025-03-20 08:13:09,270 [INFO] Request completed in 0.00s: GET /static/js/main.js - 304
+2025-03-20 08:13:13,979 [INFO] Request started: POST /login
+2025-03-20 08:13:13,980 [INFO] The CSRF tokens do not match.
+2025-03-20 08:13:13,981 [INFO] Request completed in 0.00s: POST /login - 200
+2025-03-20 08:13:14,340 [INFO] Request started: GET /static/css/custom.css
+2025-03-20 08:13:14,341 [INFO] Request completed in 0.00s: GET /static/css/custom.css - 304
+2025-03-20 08:13:14,358 [INFO] Request started: GET /static/js/main.js
+2025-03-20 08:13:14,359 [INFO] Request completed in 0.00s: GET /static/js/main.js - 304
+2025-03-20 08:13:14,360 [INFO] Request started: GET /static/js/audio_recorder.js
+2025-03-20 08:13:14,361 [INFO] Request completed in 0.00s: GET /static/js/audio_recorder.js - 304
+2025-03-20 08:13:24,433 [INFO] Request started: GET /register
+2025-03-20 08:13:24,436 [INFO] Request completed in 0.00s: GET /register - 200
+2025-03-20 08:13:24,804 [INFO] Request started: GET /static/css/custom.css
+2025-03-20 08:13:24,805 [INFO] Request completed in 0.00s: GET /static/css/custom.css - 304
+2025-03-20 08:13:24,820 [INFO] Request started: GET /static/js/main.js
+2025-03-20 08:13:24,822 [INFO] Request completed in 0.00s: GET /static/js/main.js - 304
+2025-03-20 08:13:24,823 [INFO] Request started: GET /static/js/audio_recorder.js
+2025-03-20 08:13:24,824 [INFO] Request completed in 0.00s: GET /static/js/audio_recorder.js - 304
+2025-03-20 08:13:43,094 [INFO] Request started: POST /register
+2025-03-20 08:13:43,398 [INFO] The CSRF tokens do not match.
+2025-03-20 08:13:43,400 [INFO] Request completed in 0.31s: POST /register - 200
+2025-03-20 08:13:43,769 [INFO] Request started: GET /static/css/custom.css
+2025-03-20 08:13:43,770 [INFO] Request completed in 0.00s: GET /static/css/custom.css - 304
+2025-03-20 08:13:43,784 [INFO] Request started: GET /static/js/audio_recorder.js
+2025-03-20 08:13:43,785 [INFO] Request completed in 0.00s: GET /static/js/audio_recorder.js - 304
+2025-03-20 08:13:43,786 [INFO] Request started: GET /static/js/main.js
+2025-03-20 08:13:43,787 [INFO] Request completed in 0.00s: GET /static/js/main.js - 304
+2025-03-20 08:13:50,305 [INFO] Request started: GET /
+2025-03-20 08:13:50,308 [INFO] Request completed in 0.00s: GET / - 200
+2025-03-20 08:13:50,639 [INFO] Request started: GET /static/css/custom.css
+2025-03-20 08:13:50,640 [INFO] Request completed in 0.00s: GET /static/css/custom.css - 304
+2025-03-20 08:13:50,646 [INFO] Request started: GET /static/js/audio_recorder.js
+2025-03-20 08:13:50,646 [INFO] Request completed in 0.00s: GET /static/js/audio_recorder.js - 304
+2025-03-20 08:13:50,707 [INFO] Request started: GET /static/js/main.js
+2025-03-20 08:13:50,708 [INFO] Request completed in 0.00s: GET /static/js/main.js - 304
+2025-03-20 08:13:57,878 [INFO] Request started: GET /login
+2025-03-20 08:13:57,879 [INFO] Request completed in 0.00s: GET /login - 200
+2025-03-20 08:13:58,246 [INFO] Request started: GET /static/css/custom.css
+2025-03-20 08:13:58,247 [INFO] Request completed in 0.00s: GET /static/css/custom.css - 304
+2025-03-20 08:13:58,259 [INFO] Request started: GET /static/js/audio_recorder.js
+2025-03-20 08:13:58,259 [INFO] Request completed in 0.00s: GET /static/js/audio_recorder.js - 304
+2025-03-20 08:13:58,268 [INFO] Request started: GET /static/js/main.js
+2025-03-20 08:13:58,268 [INFO] Request completed in 0.00s: GET /static/js/main.js - 304
+2025-03-20 08:14:09,964 [INFO] Request started: POST /login
+2025-03-20 08:14:09,965 [INFO] The CSRF tokens do not match.
+2025-03-20 08:14:09,966 [INFO] Request completed in 0.00s: POST /login - 200
+2025-03-20 08:14:10,337 [INFO] Request started: GET /static/css/custom.css
+2025-03-20 08:14:10,337 [INFO] Request completed in 0.00s: GET /static/css/custom.css - 304
+2025-03-20 08:14:10,347 [INFO] Request started: GET /static/js/main.js
+2025-03-20 08:14:10,348 [INFO] Request completed in 0.00s: GET /static/js/main.js - 304
+2025-03-20 08:14:10,349 [INFO] Request started: GET /static/js/audio_recorder.js
+2025-03-20 08:14:10,349 [INFO] Request completed in 0.00s: GET /static/js/audio_recorder.js - 304
+2025-03-20 08:16:35,087 [INFO] Request started: GET /
+2025-03-20 08:16:35,119 [INFO] Request completed in 0.03s: GET / - 200
+2025-03-20 08:16:35,141 [INFO] Request started: GET /
+2025-03-20 08:16:35,143 [INFO] Request completed in 0.00s: GET / - 200
+2025-03-20 08:16:35,153 [INFO] Request started: GET /static/css/custom.css
+2025-03-20 08:16:35,163 [INFO] Request completed in 0.01s: GET /static/css/custom.css - 200
+2025-03-20 08:16:35,179 [INFO] Request started: GET /static/js/audio_recorder.js
+2025-03-20 08:16:35,180 [INFO] Request completed in 0.00s: GET /static/js/audio_recorder.js - 200
+2025-03-20 08:16:35,293 [INFO] Request started: GET /static/js/main.js
+2025-03-20 08:16:35,293 [INFO] Request completed in 0.00s: GET /static/js/main.js - 200
+2025-03-20 08:16:36,577 [INFO] Request started: GET /static/css/custom.css
+2025-03-20 08:16:36,577 [INFO] Request completed in 0.00s: GET /static/css/custom.css - 304
+2025-03-20 08:16:36,579 [INFO] Request started: GET /static/js/main.js
+2025-03-20 08:16:36,579 [INFO] Request completed in 0.00s: GET /static/js/main.js - 304
+2025-03-20 08:16:36,679 [INFO] Request started: GET /static/js/audio_recorder.js
+2025-03-20 08:16:36,680 [INFO] Request completed in 0.00s: GET /static/js/audio_recorder.js - 304
+2025-03-20 08:17:43,165 [INFO] Request started: GET /register
+2025-03-20 08:17:43,180 [INFO] Request completed in 0.01s: GET /register - 200
+2025-03-20 08:17:43,637 [INFO] Request started: GET /static/css/custom.css
+2025-03-20 08:17:43,638 [INFO] Request completed in 0.00s: GET /static/css/custom.css - 304
+2025-03-20 08:17:43,667 [INFO] Request started: GET /static/js/audio_recorder.js
+2025-03-20 08:17:43,669 [INFO] Request completed in 0.00s: GET /static/js/audio_recorder.js - 304
+2025-03-20 08:17:43,670 [INFO] Request started: GET /static/js/main.js
+2025-03-20 08:17:43,671 [INFO] Request completed in 0.00s: GET /static/js/main.js - 304
+2025-03-20 08:17:59,713 [INFO] Request started: POST /register
+2025-03-20 08:17:59,730 [ERROR] An unexpected error occurred
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/auth.py", line 41, in register
+    if form.validate_on_submit():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask_wtf/form.py", line 86, in validate_on_submit
+    return self.is_submitted() and self.validate(extra_validators=extra_validators)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/wtforms/form.py", line 330, in validate
+    return super().validate(extra)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/wtforms/form.py", line 147, in validate
+    if not field.validate(self, extra):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/wtforms/fields/core.py", line 234, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/wtforms/fields/core.py", line 254, in _run_validation_chain
+    validator(form, self)
+  File "/home/runner/workspace/forms.py", line 26, in validate_username
+    user = User.query.filter_by(username=username.data).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2858, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2239, in _execute_internal
+    bind = self.get_bind(**bind_arguments)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask_sqlalchemy/session.py", line 53, in get_bind
+    engines = self._db.engines
+              ^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/flask_sqlalchemy/extension.py", line 690, in engines
+    raise RuntimeError(
+RuntimeError: The current Flask app is not registered with this 'SQLAlchemy' instance. Did you forget to call 'init_app', or did you create multiple 'SQLAlchemy' instances?
+2025-03-20 08:17:59,761 [INFO] Request completed in 0.05s: POST /register - 500
+2025-03-20 08:18:10,269 [INFO] Request started: GET /
+2025-03-20 08:18:10,269 [INFO] Request completed in 0.00s: GET / - 200
+2025-03-20 08:18:10,697 [INFO] Request started: GET /static/js/audio_recorder.js
+2025-03-20 08:18:10,698 [INFO] Request completed in 0.00s: GET /static/js/audio_recorder.js - 304
+2025-03-20 08:18:10,761 [INFO] Request started: GET /static/css/custom.css
+2025-03-20 08:18:10,762 [INFO] Request completed in 0.00s: GET /static/css/custom.css - 304
+2025-03-20 08:18:10,778 [INFO] Request started: GET /static/js/main.js
+2025-03-20 08:18:10,778 [INFO] Request completed in 0.00s: GET /static/js/main.js - 304
+2025-03-20 08:18:52,350 [INFO] Request started: GET /
+2025-03-20 08:18:52,363 [INFO] Request completed in 0.01s: GET / - 200
+2025-03-20 08:18:52,389 [INFO] Request started: GET /static/css/custom.css
+2025-03-20 08:18:52,393 [INFO] Request completed in 0.00s: GET /static/css/custom.css - 200
+2025-03-20 08:18:52,418 [INFO] Request started: GET /static/js/audio_recorder.js
+2025-03-20 08:18:52,419 [INFO] Request completed in 0.00s: GET /static/js/audio_recorder.js - 200
+2025-03-20 08:18:52,428 [INFO] Request started: GET /static/js/main.js
+2025-03-20 08:18:52,429 [INFO] Request completed in 0.00s: GET /static/js/main.js - 200
+2025-03-20 08:18:52,540 [INFO] Request started: GET /
+2025-03-20 08:18:52,541 [INFO] Request completed in 0.00s: GET / - 200
+2025-03-20 08:18:52,912 [INFO] Request started: GET /static/css/custom.css
+2025-03-20 08:18:52,912 [INFO] Request completed in 0.00s: GET /static/css/custom.css - 304
+2025-03-20 08:18:52,920 [INFO] Request started: GET /static/js/audio_recorder.js
+2025-03-20 08:18:52,921 [INFO] Request completed in 0.00s: GET /static/js/audio_recorder.js - 304
+2025-03-20 08:18:52,922 [INFO] Request started: GET /static/js/main.js
+2025-03-20 08:18:52,923 [INFO] Request completed in 0.00s: GET /static/js/main.js - 304
+2025-03-20 08:23:09,104 [INFO] Request started: GET /
+2025-03-20 08:23:09,118 [INFO] Request completed in 0.01s: GET / - 200
+2025-03-20 08:23:09,142 [INFO] Request started: GET /static/css/custom.css
+2025-03-20 08:23:09,147 [INFO] Request completed in 0.01s: GET /static/css/custom.css - 200
+2025-03-20 08:23:09,217 [INFO] Request started: GET /static/js/main.js
+2025-03-20 08:23:09,218 [INFO] Request completed in 0.00s: GET /static/js/main.js - 200
+2025-03-20 08:23:09,245 [INFO] Request started: GET /static/js/audio_recorder.js
+2025-03-20 08:23:09,246 [INFO] Request completed in 0.00s: GET /static/js/audio_recorder.js - 200
+2025-03-20 08:24:34,887 [INFO] Request started: GET /
+2025-03-20 08:24:34,887 [INFO] Request completed in 0.00s: GET / - 200
+2025-03-20 08:24:35,844 [INFO] Request started: GET /static/js/main.js
+2025-03-20 08:24:35,844 [INFO] Request completed in 0.00s: GET /static/js/main.js - 304
+2025-03-20 08:24:36,060 [INFO] Request started: GET /static/css/custom.css
+2025-03-20 08:24:36,061 [INFO] Request completed in 0.00s: GET /static/css/custom.css - 200
+2025-03-20 08:24:36,191 [INFO] Request started: GET /static/js/audio_recorder.js
+2025-03-20 08:24:36,192 [INFO] Request completed in 0.00s: GET /static/js/audio_recorder.js - 304
+2025-03-20 08:25:02,279 [INFO] Request started: POST /match_lyrics
+2025-03-20 08:25:02,279 [INFO] Request completed in 0.00s: POST /match_lyrics - 400
+2025-03-20 08:25:16,729 [INFO] Request started: POST /match_lyrics
+2025-03-20 08:25:16,731 [INFO] Request completed in 0.00s: POST /match_lyrics - 400
+2025-03-20 08:28:44,471 [INFO] Request started: GET /
+2025-03-20 08:28:44,485 [INFO] Request completed in 0.01s: GET / - 200
+2025-03-20 08:28:44,536 [INFO] Request started: GET /static/css/custom.css
+2025-03-20 08:28:44,551 [INFO] Request completed in 0.01s: GET /static/css/custom.css - 200
+2025-03-20 08:28:44,589 [INFO] Request started: GET /static/js/main.js
+2025-03-20 08:28:44,590 [INFO] Request completed in 0.00s: GET /static/js/main.js - 200
+2025-03-20 08:28:44,592 [INFO] Request started: GET /static/js/audio_recorder.js
+2025-03-20 08:28:44,593 [INFO] Request completed in 0.00s: GET /static/js/audio_recorder.js - 200
+2025-03-20 08:28:45,348 [INFO] Request started: GET /
+2025-03-20 08:28:45,349 [INFO] Request completed in 0.00s: GET / - 200
+2025-03-20 08:28:45,717 [INFO] Request started: GET /static/css/custom.css
+2025-03-20 08:28:45,718 [INFO] Request completed in 0.00s: GET /static/css/custom.css - 304
+2025-03-20 08:28:46,499 [INFO] Request started: GET /static/js/audio_recorder.js
+2025-03-20 08:28:46,500 [INFO] Request completed in 0.00s: GET /static/js/audio_recorder.js - 304
+2025-03-20 08:28:46,529 [INFO] Request started: GET /static/js/main.js
+2025-03-20 08:28:46,531 [INFO] Request completed in 0.00s: GET /static/js/main.js - 200
+2025-03-20 08:29:32,305 [INFO] Request started: POST /match_lyrics
+2025-03-20 08:29:32,308 [INFO] Received lyrics: mahal kita
+2025-03-20 08:29:32,309 [INFO] Returning matches: [{'id': 1, 'title': 'Test Song', 'artist': 'Test Artist', 'album': 'Test Album', 'release_year': 2024, 'artwork_url': None, 'streaming_urls': {'spotify': 'https://open.spotify.com', 'youtube': 'https://youtube.com'}, 'confidence': 0.85}]
+2025-03-20 08:29:32,309 [INFO] Request completed in 0.00s: POST /match_lyrics - 200
+2025-03-20 08:29:44,938 [INFO] Request started: POST /match_lyrics
+2025-03-20 08:29:44,941 [INFO] Received lyrics: i love you
+2025-03-20 08:29:44,941 [INFO] Returning matches: [{'id': 1, 'title': 'Test Song', 'artist': 'Test Artist', 'album': 'Test Album', 'release_year': 2024, 'artwork_url': None, 'streaming_urls': {'spotify': 'https://open.spotify.com', 'youtube': 'https://youtube.com'}, 'confidence': 0.85}]
+2025-03-20 08:29:44,942 [INFO] Request completed in 0.00s: POST /match_lyrics - 200
+2025-03-20 08:31:10,179 [INFO] Request started: GET /
+2025-03-20 08:31:10,201 [INFO] Request completed in 0.02s: GET / - 200
+2025-03-20 08:31:11,422 [INFO] Request started: GET /static/js/main.js
+2025-03-20 08:31:11,427 [INFO] Request completed in 0.00s: GET /static/js/main.js - 304
+2025-03-20 08:31:11,446 [INFO] Request started: GET /static/js/audio_recorder.js
+2025-03-20 08:31:11,446 [INFO] Request completed in 0.00s: GET /static/js/audio_recorder.js - 304
+2025-03-20 08:31:11,642 [INFO] Request started: GET /static/css/custom.css
+2025-03-20 08:31:11,643 [INFO] Request completed in 0.00s: GET /static/css/custom.css - 200
+2025-03-20 08:31:12,765 [INFO] Request started: GET /
+2025-03-20 08:31:12,766 [INFO] Request completed in 0.00s: GET / - 200
+2025-03-20 08:31:12,927 [INFO] Request started: GET /static/css/custom.css
+2025-03-20 08:31:12,927 [INFO] Request completed in 0.00s: GET /static/css/custom.css - 200
+2025-03-20 08:31:12,956 [INFO] Request started: GET /static/js/audio_recorder.js
+2025-03-20 08:31:12,956 [INFO] Request completed in 0.00s: GET /static/js/audio_recorder.js - 200
+2025-03-20 08:31:12,965 [INFO] Request started: GET /static/js/main.js
+2025-03-20 08:31:12,966 [INFO] Request completed in 0.00s: GET /static/js/main.js - 200
+2025-03-20 08:31:28,411 [INFO] Request started: POST /match_lyrics
+2025-03-20 08:31:28,414 [INFO] Received lyrics: sefsefsefsef
+2025-03-20 08:31:28,414 [INFO] Returning matches: [{'id': 1, 'title': 'Test Song', 'artist': 'Test Artist', 'album': 'Test Album', 'release_year': 2024, 'artwork_url': None, 'streaming_urls': {'spotify': 'https://open.spotify.com', 'youtube': 'https://youtube.com'}, 'confidence': 0.85}]
+2025-03-20 08:31:28,414 [INFO] Request completed in 0.00s: POST /match_lyrics - 200
+2025-03-20 08:31:40,417 [INFO] Request started: POST /match_melody
+2025-03-20 08:31:40,552 [INFO] Request completed in 0.13s: POST /match_melody - 400
+2025-03-20 08:31:46,722 [INFO] Request started: POST /match_lyrics
+2025-03-20 08:31:46,723 [INFO] Received lyrics: sefsefsefsefsfesfees
+2025-03-20 08:31:46,724 [INFO] Returning matches: [{'id': 1, 'title': 'Test Song', 'artist': 'Test Artist', 'album': 'Test Album', 'release_year': 2024, 'artwork_url': None, 'streaming_urls': {'spotify': 'https://open.spotify.com', 'youtube': 'https://youtube.com'}, 'confidence': 0.85}]
+2025-03-20 08:31:46,724 [INFO] Request completed in 0.00s: POST /match_lyrics - 200
+2025-03-20 08:49:26,940 [INFO] Request started: GET /
+2025-03-20 08:49:26,988 [INFO] Request completed in 0.05s: GET / - 200
+2025-03-20 08:49:27,024 [INFO] Request started: GET /static/css/custom.css
+2025-03-20 08:49:27,059 [INFO] Request completed in 0.04s: GET /static/css/custom.css - 200
+2025-03-20 08:49:27,078 [INFO] Request started: GET /static/js/main.js
+2025-03-20 08:49:27,085 [INFO] Request completed in 0.01s: GET /static/js/main.js - 200
+2025-03-20 08:49:27,117 [INFO] Request started: GET /static/js/audio_recorder.js
+2025-03-20 08:49:27,121 [INFO] Request completed in 0.00s: GET /static/js/audio_recorder.js - 200
+2025-03-20 08:49:28,856 [INFO] Request started: GET /
+2025-03-20 08:49:28,857 [INFO] Request completed in 0.00s: GET / - 200
+2025-03-20 08:49:30,022 [INFO] Request started: GET /static/css/custom.css
+2025-03-20 08:49:30,025 [INFO] Request completed in 0.00s: GET /static/css/custom.css - 304
+2025-03-20 08:49:30,044 [INFO] Request started: GET /static/js/audio_recorder.js
+2025-03-20 08:49:30,045 [INFO] Request completed in 0.00s: GET /static/js/audio_recorder.js - 304
+2025-03-20 08:49:30,098 [INFO] Request started: GET /static/js/main.js
+2025-03-20 08:49:30,099 [INFO] Request completed in 0.00s: GET /static/js/main.js - 304
+2025-03-20 08:49:52,202 [INFO] Request started: GET /
+2025-03-20 08:49:52,203 [INFO] Request completed in 0.00s: GET / - 200
+2025-03-20 08:49:52,229 [INFO] Request started: GET /static/css/custom.css
+2025-03-20 08:49:52,230 [INFO] Request completed in 0.00s: GET /static/css/custom.css - 200
+2025-03-20 08:49:52,272 [INFO] Request started: GET /static/js/audio_recorder.js
+2025-03-20 08:49:52,274 [INFO] Request completed in 0.00s: GET /static/js/audio_recorder.js - 200
+2025-03-20 08:49:52,275 [INFO] Request started: GET /static/js/main.js
+2025-03-20 08:49:52,276 [INFO] Request completed in 0.00s: GET /static/js/main.js - 200
+2025-03-20 08:50:11,033 [INFO] Request started: POST /match_lyrics
+2025-03-20 08:50:11,035 [INFO] Received lyrics: when I am down
+2025-03-20 08:50:11,036 [INFO] Searching MusicBrainz for lyrics: when I am down...
+2025-03-20 08:50:11,038 [DEBUG] GET request for https://musicbrainz.org/ws/2/recording/?limit=5&query=when+I+am+down
+2025-03-20 08:50:11,040 [DEBUG] requesting with UA SongRecognitionApp/1.0 python-musicbrainzngs/0.7.1 ( https://replit.com/@user/song-recognition )
+2025-03-20 08:50:11,801 [INFO] in <ws2:recording>, uncaught <first-release-date>
+2025-03-20 08:50:11,802 [INFO] in <ws2:recording>, uncaught <first-release-date>
+2025-03-20 08:50:11,802 [INFO] in <ws2:release-group>, uncaught attribute type-id
+2025-03-20 08:50:11,802 [INFO] in <ws2:alias>, uncaught attribute type-id
+2025-03-20 08:50:11,802 [INFO] in <ws2:recording>, uncaught <first-release-date>
+2025-03-20 08:50:11,802 [INFO] in <ws2:release-group>, uncaught attribute type-id
+2025-03-20 08:50:11,802 [INFO] in <ws2:alias>, uncaught attribute type-id
+2025-03-20 08:50:11,803 [INFO] in <ws2:alias>, uncaught attribute type-id
+2025-03-20 08:50:11,803 [INFO] in <ws2:recording>, uncaught <first-release-date>
+2025-03-20 08:50:11,803 [INFO] in <ws2:release-group>, uncaught attribute type-id
+2025-03-20 08:50:11,803 [INFO] in <ws2:recording>, uncaught <first-release-date>
+2025-03-20 08:50:11,803 [INFO] in <ws2:release-group>, uncaught attribute type-id
+2025-03-20 08:50:11,803 [INFO] in <ws2:release-group>, uncaught attribute type-id
+2025-03-20 08:50:11,804 [INFO] Raw MusicBrainz response: {'recording-list': [{'id': '21c7987f-4add-4d28-9630-fd202c655107', 'ext:score': '100', 'title': 'When I Am Down', 'artist-credit': [{'name': 'Dennis Brown', 'artist': {'id': '24c0aaf3-4ac2-4f9a-9ce6-a1545a96f017', 'name': 'Dennis Brown', 'sort-name': 'Brown, Dennis', 'disambiguation': 'Jamaican reggae singer Dennis Emmanuel Brown'}}], 'release-list': [{'id': 'f96af1cb-405a-4b05-aa62-d0af6f988599', 'title': 'Reggae Archives Vol.2 - Good Sounds And Rarities', 'artist-credit': [{'name': 'Various Artists', 'artist': {'id': '89ad4ac3-39f7-470e-963a-56509c546377', 'name': 'Various Artists', 'sort-name': 'Various Artists', 'disambiguation': 'add compilations to this artist'}}], 'release-group': {'id': '722b412e-dc3d-465c-b5f0-8e6f00667e55', 'title': 'Reggae Archives Vol.2 - Good Sounds And Rarities', 'secondary-type-list': ['Compilation']}, 'date': '2018', 'country': 'FR', 'release-event-list': [{'date': '2018', 'area': {'id': '08310658-51eb-3801-80de-5a0739207115', 'name': 'France', 'sort-name': 'France', 'iso-3166-1-code-list': ['FR']}}], 'medium-list': [{'position': '2', 'format': 'CD', 'track-list': [{'id': '5ef37574-1836-47c1-93cb-d9ba4e7ac539', 'number': '21', 'title': 'When I Am Down'}], 'track-count': 24}], 'medium-track-count': 48, 'medium-count': 2, 'artist-credit-phrase': 'Various Artists'}], 'artist-credit-phrase': 'Dennis Brown'}, {'id': '5b5948d1-a2cd-4ac4-bf24-488c714e010c', 'ext:score': '100', 'title': 'When I Am Down', 'length': '231000', 'artist-credit': [{'name': 'Dennis Brown', 'artist': {'id': '24c0aaf3-4ac2-4f9a-9ce6-a1545a96f017', 'name': 'Dennis Brown', 'sort-name': 'Brown, Dennis', 'disambiguation': 'Jamaican reggae singer Dennis Emmanuel Brown'}}], 'release-list': [{'id': '74ba1b5d-e47a-46a1-a0ff-88b2386ceca0', 'title': 'Money In My Pocket', 'status': 'Official', 'release-group': {'id': '6eb52b00-c2e6-459d-878f-c66415bfdb28', 'type': 'Compilation', 'title': 'Money In My Pocket', 'primary-type': 'Album', 'secondary-type-list': ['Compilation']}, 'date': '1997', 'country': 'GB', 'release-event-list': [{'date': '1997', 'area': {'id': '8a754a16-0027-3a29-b6d7-2b40ea0481ed', 'name': 'United Kingdom', 'sort-name': 'United Kingdom', 'iso-3166-1-code-list': ['GB']}}], 'medium-list': [{'position': '1', 'format': 'CD', 'track-list': [{'id': 'c37dd090-a25c-4728-9015-6af07e1cd703', 'number': '12', 'title': 'When I Am Down', 'length': '231000', 'track_or_recording_length': '231000'}], 'track-count': 14}], 'medium-track-count': 14, 'medium-count': 1}], 'artist-credit-phrase': 'Dennis Brown'}, {'id': '8c2c8c38-b806-4360-b2a3-6de3c889e06a', 'ext:score': '82', 'title': 'When I am down the pit', 'length': '114133', 'artist-credit': [{'name': 'Ewan MacColl', 'artist': {'id': 'f8c01287-6bff-4e63-b570-2a61c24e64d6', 'name': 'Ewan MacColl', 'sort-name': 'MacColl, Ewan', 'alias-list': [{'sort-name': 'E. McColl', 'alias': 'E. McColl'}, {'sort-name': 'Ewan McColl', 'alias': 'Ewan McColl'}, {'sort-name': 'Miller, James Henry', 'type': 'Legal name', 'alias': 'James Henry Miller'}]}}, ', ', {'name': 'Charles Parker', 'artist': {'id': '9be995e5-56e5-4556-aab2-45d563dfabae', 'name': 'Charles Parker', 'sort-name': 'Parker, Charles', 'disambiguation': 'BBC producer'}}, ' and ', {'name': 'Peggy Seeger', 'artist': {'id': '66894f76-76bd-4318-a30c-3b565b9e95b8', 'name': 'Peggy Seeger', 'sort-name': 'Seeger, Peggy'}}], 'release-list': [{'id': '03f7ab63-f644-4be3-8212-5736a59382bc', 'title': 'The Big Hewer', 'status': 'Official', 'artist-credit': [{'name': 'Ewan MacColl', 'artist': {'id': 'f8c01287-6bff-4e63-b570-2a61c24e64d6', 'name': 'Ewan MacColl', 'sort-name': 'MacColl, Ewan'}}, ', ', {'name': 'Charles Parker', 'artist': {'id': '9be995e5-56e5-4556-aab2-45d563dfabae', 'name': 'Charles Parker', 'sort-name': 'Parker, Charles', 'disambiguation': 'BBC producer'}}, ' and ', {'name': 'Peggy Seeger', 'artist': {'id': '66894f76-76bd-4318-a30c-3b565b9e95b8', 'name': 'Peggy Seeger', 'sort-name': 'Seeger, Peggy'}}], 'release-group': {'id': '102e7ec4-0b43-3530-b882-c3f9ade45ee6', 'type': 'Album', 'title': 'The Big Hewer', 'primary-type': 'Album'}, 'date': '1999', 'country': 'GB', 'release-event-list': [{'date': '1999', 'area': {'id': '8a754a16-0027-3a29-b6d7-2b40ea0481ed', 'name': 'United Kingdom', 'sort-name': 'United Kingdom', 'iso-3166-1-code-list': ['GB']}}], 'medium-list': [{'position': '1', 'format': 'CD', 'track-list': [{'id': '75e2efdc-fc17-3e81-a74a-6082bcad71f2', 'number': '7', 'title': 'When I am down the pit', 'length': '114133', 'track_or_recording_length': '114133'}], 'track-count': 18}], 'medium-track-count': 18, 'medium-count': 1, 'artist-credit-phrase': 'Ewan MacColl, Charles Parker and Peggy Seeger'}], 'artist-credit-phrase': 'Ewan MacColl, Charles Parker and Peggy Seeger'}, {'id': 'c82f721a-4fd0-4da5-ad27-f3956578e0fe', 'ext:score': '75', 'title': 'Bro. Call Me When I Am Down', 'length': '178640', 'artist-credit': [{'name': 'Loney Dear', 'artist': {'id': '45b3b313-0ec2-455b-b2fb-858bb4faac10', 'name': 'Loney Dear', 'sort-name': 'Loney Dear', 'disambiguation': 'Swedish singer-songwriter Emil Svanängen', 'alias-list': [{'sort-name': 'Lonely, Dear', 'alias': 'Lonely, Dear'}, {'sort-name': 'Loney, Dear', 'alias': 'Loney, Dear'}, {'sort-name': 'Lonely Dear', 'type': 'Search hint', 'alias': 'Lonely Dear'}, {'sort-name': 'Lonley Dear', 'type': 'Search hint', 'alias': 'Lonley Dear'}]}}], 'release-list': [{'id': 'be2ff01b-6140-42fd-8c7f-48d1ceb70df3', 'title': 'Citadel Band', 'status': 'Official', 'artist-credit': [{'name': 'Loney Dear', 'artist': {'id': '45b3b313-0ec2-455b-b2fb-858bb4faac10', 'name': 'Loney Dear', 'sort-name': 'Loney Dear', 'disambiguation': 'Swedish singer-songwriter Emil Svanängen'}}], 'release-group': {'id': '21e53a2e-17a6-3502-93f2-e5a5eafea3c0', 'type': 'Album', 'title': 'Citadel Band', 'primary-type': 'Album'}, 'date': '2004', 'country': 'SE', 'release-event-list': [{'date': '2004', 'area': {'id': '23d10872-f5ae-3f0c-bf55-332788a16ecb', 'name': 'Sweden', 'sort-name': 'Sweden', 'iso-3166-1-code-list': ['SE']}}], 'medium-list': [{'position': '1', 'track-list': [{'id': 'e1ac1194-2654-371e-abca-9e0d1f099cea', 'number': '5', 'title': 'Bro. Call Me When I Am Down', 'length': '178640', 'track_or_recording_length': '178640'}], 'track-count': 12}], 'medium-track-count': 12, 'medium-count': 1, 'artist-credit-phrase': 'Loney Dear'}], 'artist-credit-phrase': 'Loney Dear'}, {'id': '7317b2f5-d51c-4125-8b05-9d4ca4ae97e6', 'ext:score': '72', 'title': 'When I Am Coming Down', 'length': '294693', 'artist-credit': [{'name': 'The Godfathers', 'artist': {'id': 'de288aa4-b753-490d-af0e-62bbe63e8411', 'name': 'The Godfathers', 'sort-name': 'Godfathers, The', 'disambiguation': 'UK alternative rock band', 'alias-list': [{'sort-name': 'Godfathers', 'alias': 'Godfathers'}]}}], 'release-list': [{'id': '7ddf2ba8-3014-4553-b90e-60e84752813d', 'title': 'Birth, School, Work, Death: The Best of The Godfathers', 'status': 'Official', 'artist-credit': [{'name': 'The Godfathers', 'artist': {'id': 'de288aa4-b753-490d-af0e-62bbe63e8411', 'name': 'The Godfathers', 'sort-name': 'Godfathers, The', 'disambiguation': 'UK alternative rock band'}}], 'release-group': {'id': '971a9eb4-3d42-3aa2-8b5b-7c3f5229ae6c', 'type': 'Compilation', 'title': 'Birth, School, Work, Death: The Best of The Godfathers', 'primary-type': 'Album', 'secondary-type-list': ['Compilation']}, 'date': '1996', 'country': 'US', 'release-event-list': [{'date': '1996', 'area': {'id': '489ce91b-6658-3307-9877-795b68554c98', 'name': 'United States', 'sort-name': 'United States', 'iso-3166-1-code-list': ['US']}}], 'medium-list': [{'position': '1', 'format': 'CD', 'track-list': [{'id': '87f4c50a-4a94-3567-86cf-8d2c81058c69', 'number': '16', 'title': 'When I Am Coming Down', 'length': '294693', 'track_or_recording_length': '294693'}], 'track-count': 18}], 'medium-track-count': 18, 'medium-count': 1, 'artist-credit-phrase': 'The Godfathers'}, {'id': 'e7006c09-3e0b-48c5-86e2-5b5bea0172a2', 'title': 'Birth, School, Work, Death: The Best of The Godfathers', 'status': 'Official', 'artist-credit': [{'name': 'The Godfathers', 'artist': {'id': 'de288aa4-b753-490d-af0e-62bbe63e8411', 'name': 'The Godfathers', 'sort-name': 'Godfathers, The', 'disambiguation': 'UK alternative rock band'}}], 'release-group': {'id': '971a9eb4-3d42-3aa2-8b5b-7c3f5229ae6c', 'type': 'Compilation', 'title': 'Birth, School, Work, Death: The Best of The Godfathers', 'primary-type': 'Album', 'secondary-type-list': ['Compilation']}, 'date': '1996', 'country': 'GB', 'release-event-list': [{'date': '1996', 'area': {'id': '8a754a16-0027-3a29-b6d7-2b40ea0481ed', 'name': 'United Kingdom', 'sort-name': 'United Kingdom', 'iso-3166-1-code-list': ['GB']}}], 'medium-list': [{'position': '1', 'format': 'CD', 'track-list': [{'id': 'c97c52d3-a2b0-33d7-9492-1d430ed3aa04', 'number': '16', 'title': 'When I Am Coming Down', 'length': '294693', 'track_or_recording_length': '294693'}], 'track-count': 18}], 'medium-track-count': 18, 'medium-count': 1, 'artist-credit-phrase': 'The Godfathers'}], 'isrc-list': ['USSM10006866'], 'artist-credit-phrase': 'The Godfathers'}], 'recording-count': 2068860}
+2025-03-20 08:50:11,804 [INFO] Fetching cover art for release: f96af1cb-405a-4b05-aa62-d0af6f988599
+2025-03-20 08:50:11,804 [DEBUG] GET request for https://coverartarchive.org/release/f96af1cb-405a-4b05-aa62-d0af6f988599
+2025-03-20 08:50:11,805 [DEBUG] requesting with UA SongRecognitionApp/1.0 python-musicbrainzngs/0.7.1 ( https://replit.com/@user/song-recognition )
+2025-03-20 08:50:12,989 [INFO] Processed match: When I Am Down by Dennis Brown
+2025-03-20 08:50:12,990 [INFO] Fetching cover art for release: 74ba1b5d-e47a-46a1-a0ff-88b2386ceca0
+2025-03-20 08:50:12,990 [DEBUG] GET request for https://coverartarchive.org/release/74ba1b5d-e47a-46a1-a0ff-88b2386ceca0
+2025-03-20 08:50:12,991 [DEBUG] requesting with UA SongRecognitionApp/1.0 python-musicbrainzngs/0.7.1 ( https://replit.com/@user/song-recognition )
+2025-03-20 08:50:14,277 [INFO] Processed match: When I Am Down by Dennis Brown
+2025-03-20 08:50:14,278 [INFO] Fetching cover art for release: 03f7ab63-f644-4be3-8212-5736a59382bc
+2025-03-20 08:50:14,278 [DEBUG] GET request for https://coverartarchive.org/release/03f7ab63-f644-4be3-8212-5736a59382bc
+2025-03-20 08:50:14,279 [DEBUG] requesting with UA SongRecognitionApp/1.0 python-musicbrainzngs/0.7.1 ( https://replit.com/@user/song-recognition )
+2025-03-20 08:50:15,548 [INFO] Processed match: When I am down the pit by Ewan MacColl, Charles Parker and Peggy Seeger
+2025-03-20 08:50:15,549 [INFO] Fetching cover art for release: be2ff01b-6140-42fd-8c7f-48d1ceb70df3
+2025-03-20 08:50:15,549 [DEBUG] GET request for https://coverartarchive.org/release/be2ff01b-6140-42fd-8c7f-48d1ceb70df3
+2025-03-20 08:50:15,550 [DEBUG] requesting with UA SongRecognitionApp/1.0 python-musicbrainzngs/0.7.1 ( https://replit.com/@user/song-recognition )
+2025-03-20 08:50:17,375 [INFO] Processed match: Bro. Call Me When I Am Down by Loney Dear
+2025-03-20 08:50:17,375 [INFO] Fetching cover art for release: 7ddf2ba8-3014-4553-b90e-60e84752813d
+2025-03-20 08:50:17,375 [DEBUG] GET request for https://coverartarchive.org/release/7ddf2ba8-3014-4553-b90e-60e84752813d
+2025-03-20 08:50:17,376 [DEBUG] requesting with UA SongRecognitionApp/1.0 python-musicbrainzngs/0.7.1 ( https://replit.com/@user/song-recognition )
+2025-03-20 08:50:19,196 [INFO] Processed match: When I Am Coming Down by The Godfathers
+2025-03-20 08:50:19,196 [INFO] Found 5 valid matches
+2025-03-20 08:50:19,202 [INFO] Found 5 matches
+2025-03-20 08:50:19,202 [INFO] Request completed in 8.17s: POST /match_lyrics - 200
